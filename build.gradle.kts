@@ -1,5 +1,3 @@
-import org.gradle.internal.impldep.com.fasterxml.jackson.annotation.JsonFormat.Value.from
-import org.jetbrains.kotlin.com.intellij.openapi.vfs.StandardFileSystems.jar
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -18,12 +16,13 @@ repositories {
 }
 
 dependencies {
+	implementation("com.google.code.gson:gson:2.10.1")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.apache.kafka:kafka-streams")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.kafka:spring-kafka")
-	implementation("org.apache.kafka:kafka-clients:2.6.3")
+	implementation("org.apache.kafka:kafka-clients:3.4.0")
 	implementation("org.json:json:20220924")
 	implementation("com.github.javafaker:javafaker:1.0.2")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
